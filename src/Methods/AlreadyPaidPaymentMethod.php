@@ -53,6 +53,8 @@ class AlreadyPaidPaymentMethod extends PaymentMethodBaseService
      */
     public function isActive(): bool
     {
+        //nothing
+        //just-file-alter
         $shippingCountries = $this->settingsHandlerService->getAlreadyPaidShippingCountries($this->app->getPlentyId());
         $coupon = $this->basketRepository->load()->couponCode ?? '';
         return in_array(
